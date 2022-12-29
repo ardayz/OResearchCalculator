@@ -1,0 +1,10 @@
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\obj\Debug\OResearchCalculator.csproj.AssemblyReference.cache
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\obj\Debug\OResearchCalculator.Properties.Resources.resources
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\obj\Debug\OResearchCalculator.csproj.GenerateResource.cache
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\obj\Debug\OResearchCalculator.csproj.CoreCompileInputs.cache
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\bin\Debug\OResearchCalculator.exe.config
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\bin\Debug\OResearchCalculator.exe
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\bin\Debug\OResearchCalculator.pdb
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\obj\Debug\OResearchCalculator.exe
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\obj\Debug\OResearchCalculator.pdb
+C:\Users\Adil Arda Yılmaz\source\repos\OResearchCalculator\OResearchCalculator\obj\Debug\OResearchCalculator.QueCalculator.resources
