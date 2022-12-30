@@ -35,8 +35,6 @@ namespace OResearchCalculator
             this.EtInput = new System.Windows.Forms.TextBox();
             this.NInput = new System.Windows.Forms.TextBox();
             this.KInput = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.RInput = new System.Windows.Forms.TextBox();
@@ -69,12 +67,12 @@ namespace OResearchCalculator
             this.label1 = new System.Windows.Forms.Label();
             this.Pn = new System.Windows.Forms.Label();
             this.Pindex = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -90,12 +88,12 @@ namespace OResearchCalculator
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label10);
+            this.splitContainer1.Panel1.Controls.Add(this.label9);
             this.splitContainer1.Panel1.Controls.Add(this.VartInput);
             this.splitContainer1.Panel1.Controls.Add(this.EtInput);
             this.splitContainer1.Panel1.Controls.Add(this.NInput);
             this.splitContainer1.Panel1.Controls.Add(this.KInput);
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
-            this.splitContainer1.Panel1.Controls.Add(this.pictureBox6);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox7);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox8);
             this.splitContainer1.Panel1.Controls.Add(this.RInput);
@@ -140,7 +138,7 @@ namespace OResearchCalculator
             this.VartInput.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VartInput.Location = new System.Drawing.Point(168, 252);
             this.VartInput.Name = "VartInput";
-            this.VartInput.Size = new System.Drawing.Size(47, 24);
+            this.VartInput.Size = new System.Drawing.Size(47, 20);
             this.VartInput.TabIndex = 56;
             // 
             // EtInput
@@ -148,15 +146,16 @@ namespace OResearchCalculator
             this.EtInput.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EtInput.Location = new System.Drawing.Point(168, 196);
             this.EtInput.Name = "EtInput";
-            this.EtInput.Size = new System.Drawing.Size(47, 24);
+            this.EtInput.Size = new System.Drawing.Size(47, 20);
             this.EtInput.TabIndex = 55;
+            this.EtInput.TextChanged += new System.EventHandler(this.EtInput_TextChanged);
             // 
             // NInput
             // 
             this.NInput.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NInput.Location = new System.Drawing.Point(168, 146);
             this.NInput.Name = "NInput";
-            this.NInput.Size = new System.Drawing.Size(47, 24);
+            this.NInput.Size = new System.Drawing.Size(47, 20);
             this.NInput.TabIndex = 54;
             this.NInput.TextChanged += new System.EventHandler(this.NInput_TextChanged);
             // 
@@ -165,34 +164,9 @@ namespace OResearchCalculator
             this.KInput.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KInput.Location = new System.Drawing.Point(168, 95);
             this.KInput.Name = "KInput";
-            this.KInput.Size = new System.Drawing.Size(47, 24);
+            this.KInput.Size = new System.Drawing.Size(47, 20);
             this.KInput.TabIndex = 52;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.ErrorImage")));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(125, 252);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 53;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Honeydew;
-            this.pictureBox6.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.ErrorImage")));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.InitialImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(125, 196);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 51;
-            this.pictureBox6.TabStop = false;
+            this.KInput.TextChanged += new System.EventHandler(this.KInput_TextChanged);
             // 
             // pictureBox7
             // 
@@ -225,15 +199,16 @@ namespace OResearchCalculator
             this.RInput.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RInput.Location = new System.Drawing.Point(58, 252);
             this.RInput.Name = "RInput";
-            this.RInput.Size = new System.Drawing.Size(47, 24);
+            this.RInput.Size = new System.Drawing.Size(47, 20);
             this.RInput.TabIndex = 48;
+            this.RInput.TextChanged += new System.EventHandler(this.RInput_TextChanged);
             // 
             // CInput
             // 
             this.CInput.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CInput.Location = new System.Drawing.Point(58, 196);
             this.CInput.Name = "CInput";
-            this.CInput.Size = new System.Drawing.Size(47, 24);
+            this.CInput.Size = new System.Drawing.Size(47, 20);
             this.CInput.TabIndex = 47;
             this.CInput.TextChanged += new System.EventHandler(this.CInput_TextChanged);
             // 
@@ -242,7 +217,7 @@ namespace OResearchCalculator
             this.MuInput.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MuInput.Location = new System.Drawing.Point(58, 146);
             this.MuInput.Name = "MuInput";
-            this.MuInput.Size = new System.Drawing.Size(47, 24);
+            this.MuInput.Size = new System.Drawing.Size(47, 20);
             this.MuInput.TabIndex = 46;
             this.MuInput.TextChanged += new System.EventHandler(this.MuInput_TextChanged_1);
             // 
@@ -251,7 +226,7 @@ namespace OResearchCalculator
             this.LamdaInput.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LamdaInput.Location = new System.Drawing.Point(58, 95);
             this.LamdaInput.Name = "LamdaInput";
-            this.LamdaInput.Size = new System.Drawing.Size(47, 24);
+            this.LamdaInput.Size = new System.Drawing.Size(47, 20);
             this.LamdaInput.TabIndex = 42;
             this.LamdaInput.TextChanged += new System.EventHandler(this.LamdaInput_TextChanged);
             // 
@@ -264,6 +239,7 @@ namespace OResearchCalculator
             this.Clear.TabIndex = 43;
             this.Clear.Text = "Clear";
             this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
             // pictureBox5
             // 
@@ -328,7 +304,7 @@ namespace OResearchCalculator
             this.QueuingModel.Margin = new System.Windows.Forms.Padding(15);
             this.QueuingModel.Name = "QueuingModel";
             this.QueuingModel.Padding = new System.Windows.Forms.Padding(8);
-            this.QueuingModel.Size = new System.Drawing.Size(204, 43);
+            this.QueuingModel.Size = new System.Drawing.Size(157, 37);
             this.QueuingModel.TabIndex = 26;
             this.QueuingModel.Text = "Queuing Model";
             // 
@@ -357,7 +333,7 @@ namespace OResearchCalculator
             "oM/G/1:GD/∞/∞ (P-K formula)"});
             this.ModelSelection.Location = new System.Drawing.Point(15, 58);
             this.ModelSelection.Name = "ModelSelection";
-            this.ModelSelection.Size = new System.Drawing.Size(184, 24);
+            this.ModelSelection.Size = new System.Drawing.Size(184, 21);
             this.ModelSelection.TabIndex = 0;
             this.ModelSelection.SelectedIndexChanged += new System.EventHandler(this.ModelSelection_SelectedIndexChanged);
             // 
@@ -367,7 +343,7 @@ namespace OResearchCalculator
             this.LambdaLost.Location = new System.Drawing.Point(445, 308);
             this.LambdaLost.Name = "LambdaLost";
             this.LambdaLost.ReadOnly = true;
-            this.LambdaLost.Size = new System.Drawing.Size(100, 24);
+            this.LambdaLost.Size = new System.Drawing.Size(100, 20);
             this.LambdaLost.TabIndex = 41;
             // 
             // LambdaEffOut
@@ -376,7 +352,7 @@ namespace OResearchCalculator
             this.LambdaEffOut.Location = new System.Drawing.Point(440, 216);
             this.LambdaEffOut.Name = "LambdaEffOut";
             this.LambdaEffOut.ReadOnly = true;
-            this.LambdaEffOut.Size = new System.Drawing.Size(100, 24);
+            this.LambdaEffOut.Size = new System.Drawing.Size(100, 20);
             this.LambdaEffOut.TabIndex = 40;
             // 
             // CbOut
@@ -385,7 +361,7 @@ namespace OResearchCalculator
             this.CbOut.Location = new System.Drawing.Point(440, 136);
             this.CbOut.Name = "CbOut";
             this.CbOut.ReadOnly = true;
-            this.CbOut.Size = new System.Drawing.Size(100, 24);
+            this.CbOut.Size = new System.Drawing.Size(100, 20);
             this.CbOut.TabIndex = 39;
             // 
             // LqOut
@@ -394,7 +370,7 @@ namespace OResearchCalculator
             this.LqOut.Location = new System.Drawing.Point(440, 41);
             this.LqOut.Name = "LqOut";
             this.LqOut.ReadOnly = true;
-            this.LqOut.Size = new System.Drawing.Size(100, 24);
+            this.LqOut.Size = new System.Drawing.Size(100, 20);
             this.LqOut.TabIndex = 38;
             // 
             // LsOut
@@ -403,7 +379,7 @@ namespace OResearchCalculator
             this.LsOut.Location = new System.Drawing.Point(121, 306);
             this.LsOut.Name = "LsOut";
             this.LsOut.ReadOnly = true;
-            this.LsOut.Size = new System.Drawing.Size(100, 24);
+            this.LsOut.Size = new System.Drawing.Size(100, 20);
             this.LsOut.TabIndex = 37;
             this.LsOut.TextChanged += new System.EventHandler(this.LsOut_TextChanged);
             // 
@@ -413,7 +389,7 @@ namespace OResearchCalculator
             this.WqOut.Location = new System.Drawing.Point(121, 229);
             this.WqOut.Name = "WqOut";
             this.WqOut.ReadOnly = true;
-            this.WqOut.Size = new System.Drawing.Size(100, 24);
+            this.WqOut.Size = new System.Drawing.Size(100, 20);
             this.WqOut.TabIndex = 36;
             // 
             // WsOut
@@ -422,7 +398,7 @@ namespace OResearchCalculator
             this.WsOut.Location = new System.Drawing.Point(121, 138);
             this.WsOut.Name = "WsOut";
             this.WsOut.ReadOnly = true;
-            this.WsOut.Size = new System.Drawing.Size(100, 24);
+            this.WsOut.Size = new System.Drawing.Size(100, 20);
             this.WsOut.TabIndex = 35;
             // 
             // Pout
@@ -431,7 +407,7 @@ namespace OResearchCalculator
             this.Pout.Location = new System.Drawing.Point(121, 43);
             this.Pout.Name = "Pout";
             this.Pout.ReadOnly = true;
-            this.Pout.Size = new System.Drawing.Size(100, 24);
+            this.Pout.Size = new System.Drawing.Size(100, 20);
             this.Pout.TabIndex = 34;
             // 
             // label8
@@ -441,7 +417,7 @@ namespace OResearchCalculator
             this.label8.Font = new System.Drawing.Font("Lucida Sans", 8.75F, System.Drawing.FontStyle.Bold);
             this.label8.Location = new System.Drawing.Point(233, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 17);
+            this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 33;
             this.label8.Text = "P index";
             // 
@@ -452,7 +428,7 @@ namespace OResearchCalculator
             this.label7.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(380, 218);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 23);
+            this.label7.Size = new System.Drawing.Size(38, 18);
             this.label7.TabIndex = 32;
             this.label7.Text = "λeff";
             // 
@@ -463,7 +439,7 @@ namespace OResearchCalculator
             this.label6.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
             this.label6.Location = new System.Drawing.Point(380, 308);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 23);
+            this.label6.Size = new System.Drawing.Size(47, 18);
             this.label6.TabIndex = 31;
             this.label6.Text = "λlost";
             // 
@@ -474,7 +450,7 @@ namespace OResearchCalculator
             this.label5.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
             this.label5.Location = new System.Drawing.Point(380, 138);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 23);
+            this.label5.Size = new System.Drawing.Size(29, 18);
             this.label5.TabIndex = 30;
             this.label5.Text = "Cb";
             // 
@@ -485,7 +461,7 @@ namespace OResearchCalculator
             this.label4.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
             this.label4.Location = new System.Drawing.Point(380, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 23);
+            this.label4.Size = new System.Drawing.Size(28, 18);
             this.label4.TabIndex = 29;
             this.label4.Text = "Lq";
             // 
@@ -496,7 +472,7 @@ namespace OResearchCalculator
             this.label3.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(68, 308);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 23);
+            this.label3.Size = new System.Drawing.Size(27, 18);
             this.label3.TabIndex = 28;
             this.label3.Text = "Ls";
             // 
@@ -507,7 +483,7 @@ namespace OResearchCalculator
             this.label2.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(67, 227);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 23);
+            this.label2.Size = new System.Drawing.Size(31, 18);
             this.label2.TabIndex = 27;
             this.label2.Text = "Wq";
             // 
@@ -518,7 +494,7 @@ namespace OResearchCalculator
             this.label1.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(68, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 23);
+            this.label1.Size = new System.Drawing.Size(30, 18);
             this.label1.TabIndex = 26;
             this.label1.Text = "Ws";
             // 
@@ -529,7 +505,7 @@ namespace OResearchCalculator
             this.Pn.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
             this.Pn.Location = new System.Drawing.Point(67, 46);
             this.Pn.Name = "Pn";
-            this.Pn.Size = new System.Drawing.Size(37, 23);
+            this.Pn.Size = new System.Drawing.Size(28, 18);
             this.Pn.TabIndex = 17;
             this.Pn.Text = "Pn";
             // 
@@ -560,9 +536,32 @@ namespace OResearchCalculator
             "p20"});
             this.Pindex.Location = new System.Drawing.Point(236, 43);
             this.Pindex.Name = "Pindex";
-            this.Pindex.Size = new System.Drawing.Size(57, 24);
+            this.Pindex.Size = new System.Drawing.Size(57, 21);
             this.Pindex.TabIndex = 7;
             this.Pindex.SelectedIndexChanged += new System.EventHandler(this.Pindex_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.PapayaWhip;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(122, 198);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(26, 18);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Et";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.PapayaWhip;
+            this.label10.Font = new System.Drawing.Font("Lucida Sans", 11.75F, System.Drawing.FontStyle.Bold);
+            this.label10.Location = new System.Drawing.Point(117, 254);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 18);
+            this.label10.TabIndex = 57;
+            this.label10.Text = "VarT";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // QueCalculator
             // 
@@ -578,8 +577,6 @@ namespace OResearchCalculator
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -623,14 +620,14 @@ namespace OResearchCalculator
         private System.Windows.Forms.TextBox EtInput;
         private System.Windows.Forms.TextBox NInput;
         private System.Windows.Forms.TextBox KInput;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.TextBox RInput;
         private System.Windows.Forms.TextBox CInput;
         private System.Windows.Forms.TextBox MuInput;
         private System.Windows.Forms.TextBox LamdaInput;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
 
